@@ -24,6 +24,43 @@ import {
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
+import { motion } from "framer-motion";
+
+// Variants
+const containerVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, staggerChildren: 0.5 },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+};
+
+const techContainerVariants = {
+  hidden: { opacity: 0, y: -100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.5,
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const iconVariants = {
+  hidden: { opacity: 0, x: -70 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
 
 const About = () => {
   const techCategories = [
@@ -31,28 +68,43 @@ const About = () => {
       title: "Frontend",
       technologies: [
         {
-          icon: <RiReactjsLine className="text-7xl text-cyan-400" />,
+          icon: (
+            <RiReactjsLine className="text-4xl lg:text-7xl text-cyan-400" />
+          ),
           name: "React",
         },
         {
-          icon: <RiHtml5Fill className="text-7xl text-orange-500" />,
+          icon: (
+            <RiHtml5Fill className="text-4xl lg:text-7xl text-orange-500" />
+          ),
           name: "HTML5",
         },
-        { icon: <DiCss3 className="text-7xl text-blue-600" />, name: "CSS3" },
         {
-          icon: <RiJavascriptFill className="text-7xl text-yellow-400" />,
+          icon: <DiCss3 className="text-4xl lg:text-7xl text-blue-600" />,
+          name: "CSS3",
+        },
+        {
+          icon: (
+            <RiJavascriptFill className="text-4xl lg:text-7xl text-yellow-400" />
+          ),
           name: "JavaScript",
         },
         {
-          icon: <RiTailwindCssFill className="text-7xl text-cyan-500" />,
+          icon: (
+            <RiTailwindCssFill className="text-4xl lg:text-7xl text-cyan-500" />
+          ),
           name: "Tailwind",
         },
         {
-          icon: <BiLogoTypescript className="text-7xl text-blue-500" />,
+          icon: (
+            <BiLogoTypescript className="text-4xl lg:text-7xl text-blue-500" />
+          ),
           name: "TypeScript",
         },
         {
-          icon: <TbBrandReactNative className="text-7xl text-blue-400" />,
+          icon: (
+            <TbBrandReactNative className="text-4xl lg:text-7xl text-blue-400" />
+          ),
           name: "React Native",
         },
       ],
@@ -61,21 +113,31 @@ const About = () => {
       title: "Backend",
       technologies: [
         {
-          icon: <DiNodejsSmall className="text-7xl text-green-500" />,
+          icon: (
+            <DiNodejsSmall className="text-4xl lg:text-7xl text-green-500" />
+          ),
           name: "Node.js",
         },
         {
-          icon: <SiExpress className="text-7xl text-gray-500" />,
+          icon: <SiExpress className="text-4xl lg:text-7xl text-gray-500" />,
           name: "Express",
         },
-        { icon: <DiPhp className="text-7xl text-purple-600" />, name: "PHP" },
         {
-          icon: <SiMongodb className="text-7xl text-green-600" />,
+          icon: <DiPhp className="text-4xl lg:text-7xl text-purple-600" />,
+          name: "PHP",
+        },
+        {
+          icon: <SiMongodb className="text-4xl lg:text-7xl text-green-600" />,
           name: "MongoDB",
         },
-        { icon: <SiMysql className="text-7xl text-blue-700" />, name: "MySQL" },
         {
-          icon: <BiLogoPostgresql className="text-7xl text-sky-700" />,
+          icon: <SiMysql className="text-4xl lg:text-7xl text-blue-700" />,
+          name: "MySQL",
+        },
+        {
+          icon: (
+            <BiLogoPostgresql className="text-4xl lg:text-7xl text-sky-700" />
+          ),
           name: "PostgreSQL",
         },
       ],
@@ -84,31 +146,44 @@ const About = () => {
       title: "Tools & Technologies",
       technologies: [
         {
-          icon: <DiDocker className="text-7xl text-blue-400" />,
+          icon: <DiDocker className="text-4xl lg:text-7xl text-blue-400" />,
           name: "Docker",
         },
         {
-          icon: <FaGitAlt className="text-7xl text-orange-500" />,
+          icon: <FaGitAlt className="text-4xl lg:text-7xl text-orange-500" />,
+          name: "Git",
         },
         {
-          icon: <SiGithub className="text-7xl text-gray-400" />,
+          icon: <SiGithub className="text-4xl lg:text-7xl text-gray-400" />,
           name: "GitHub",
         },
         {
-          icon: <VscVscode className="text-7xl text-blue-500" />,
+          icon: <VscVscode className="text-4xl lg:text-7xl text-blue-500" />,
           name: "VS Code",
         },
-        { icon: <SiVite className="text-7xl text-yellow-500" />, name: "Vite" },
-        { icon: <DiNpm className="text-7xl text-red-600" />, name: "NPM" },
+        {
+          icon: <SiVite className="text-4xl lg:text-7xl text-yellow-500" />,
+          name: "Vite",
+        },
+        {
+          icon: <DiNpm className="text-4xl lg:text-7xl text-red-600" />,
+          name: "NPM",
+        },
       ],
     },
   ];
 
   return (
     <div className="pb-24">
+      {/* Who I Am */}
       <h2 className="my-20 text-center text-6xl">Who I Am</h2>
-      <div className="max-w-4xl mx-auto text-lg text-center leading-relaxed text-stone-300 space-y-6">
-        <p>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="max-w-4xl mx-auto text-center leading-relaxed text-stone-300 space-y-6">
+        <motion.p variants={childVariants}>
           I’m someone who sees technology as more than just lines of code — for
           me, it’s a way to{" "}
           <span className="text-cyan-400">create, solve, and connect</span>. My
@@ -117,8 +192,8 @@ const About = () => {
           actually matter. Whether it’s a web app that simplifies daily life or
           a mobile app that brings people closer, I love the challenge of taking
           an idea and turning it into something real and useful.
-        </p>
-        <p>
+        </motion.p>
+        <motion.p variants={childVariants}>
           What excites me most is the{" "}
           <span className="text-cyan-400">end-to-end journey</span> — from
           sketching out a concept to writing clean code, designing smooth
@@ -127,10 +202,11 @@ const About = () => {
           problem-solving, creativity, and persistence. At the core, I’m a
           builder, a learner, and someone who enjoys making digital experiences
           that feel effortless for others to use.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
-      <h2 className="my-20 text-center text-4xl">Technologies I work with</h2>
+      {/* Technologies */}
+      <h2 className="my-20 text-center text-6xl">Technologies I work with</h2>
       <div className="space-y-16">
         {techCategories.map((category, categoryIndex) => (
           <div
@@ -144,15 +220,23 @@ const About = () => {
             </div>
 
             <div className="lg:w-3/4">
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+              <motion.div
+                variants={techContainerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                 {category.technologies.map((tech, techIndex) => (
-                  <div key={techIndex} className="p-4 group">
+                  <motion.div
+                    variants={iconVariants}
+                    key={techIndex}
+                    className="p-4 group">
                     <div className="transition-transform duration-300 group-hover:scale-110">
                       {tech.icon}
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </div>
         ))}
