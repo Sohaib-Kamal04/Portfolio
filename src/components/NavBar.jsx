@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaBars, FaTimes } from "react-icons/fa";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ const Navbar = () => {
       {/* Logo */}
       <div className="flex items-center">
         <a href="/" aria-label="Home" className="flex items-center">
-          <img src={logo} alt="Logo" className="h-12 w-auto" />
+          <img src={logo} alt="Logo" className="h-15 w-auto" />
         </a>
       </div>
 
