@@ -176,7 +176,7 @@ const About = () => {
   return (
     <div className="pb-24">
       {/* Who I Am */}
-      <h2 className="my-20 text-center text-6xl">Who I Am</h2>
+      <h2 className="my-20 text-center text-5xl lg:text-6xl">Who I Am</h2>
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -206,7 +206,7 @@ const About = () => {
       </motion.div>
 
       {/* Technologies */}
-      <h2 className="my-20 text-center text-4xl lg:text-6xl">Technologies I work with</h2>
+      <h2 className="my-20 text-center text-5xl lg:text-6xl">Technologies I work with</h2>
       <div className="space-y-16">
         {techCategories.map((category, categoryIndex) => (
           <div
