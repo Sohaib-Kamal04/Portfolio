@@ -1,5 +1,6 @@
 import Karigar from "../assets/projects/karigar.PNG";
 import CrispCleaning from "../assets/projects/crisp_cleaning.png";
+import DermaVista from "../assets/projects/dermavista.png";
 
 export const EXPERIENCES = [
   {
@@ -7,43 +8,48 @@ export const EXPERIENCES = [
     role: "Technical Lead",
     company: "Fyntryx Solutions",
     description: [
-      "Overseeing the technical roadmap and architectural decisions for high-impact software projects.",
-      "Leading cross-functional development teams, conducting code reviews, and mentoring junior engineers.",
-      "Collaborating with stakeholders to translate business requirements into scalable technical solutions.",
+      "Directed the technical roadmap for the Crisp Cleaning platform, expanding the initial project scope from a static lead-generation site into a comprehensive, multi-tenant operational management system.",
+      "Collaborated directly with international stakeholders to define business requirements, architecting complex logic such as custom customer reward tiers and timezone-aware scheduling (accommodating Daylight Saving Time).",
+      "Engineered the full development lifecycle, ensuring seamless integration between client requirements, system architecture, and final deployment.",
     ],
-    technologies: ["React", "Next.js", "Software Architecture", "Team Leadership"],
+    technologies: ["Next.js", "Node.js", "MongoDB", "Prisma", "React Native", "Flutter"],
   },
   {
     year: "Sep 2025 - Nov 2025",
     role: "Full Stack Developer",
     company: "Fyntryx Solutions",
     description: [
-      "Directed the complete development lifecycle of the \"Crisp Cleaning\" platform, managing both frontend and backend logic.",
-      "Migrated legacy web applications to Next.js, improving site performance, SEO, and scalability.",
-      "Designed and integrated robust RESTful APIs and managed database schemas for seamless data flow.",
+      "Architected a robust backend utilizing Node.js, MongoDB, and Prisma to power three distinct role-based interfaces (Admin, Customer, and Cleaner dashboards) for job tracking, assignments, and secure payouts.",
+      "Migrated the initial React architecture to Next.js, significantly improving site performance and SEO while building a responsive, high-conversion frontend.",
+      "Integrated third-party APIs to handle complex platform features, including Stripe for automated payment processing and Geoapify for precise, location-based service routing.",
     ],
-    technologies: ["React", "Next.js", "RESTful APIs", "Node.js", "Express", "Database Design"],
+    technologies: ["Next.js", "Node.js", "MongoDB", "Prisma", "Stripe", "Geoapify"],
   },
   {
     year: "June 2025 - July 2025",
     role: "Data Analyst Intern",
     company: "Systems Ltd",
     description: [
-      "Building scalable data warehouses and transforming data into insights using Power BI, leveraging Power Query for data shaping and DAX for advanced analytics.",
-      "Streamlined ETL workflows by integrating automated data validation procedures, ensuring accurate reporting and timely availability of business intelligence dashboards to stakeholders.",
-      "Consolidated diverse data sources into unified models, applying SQL queries and automation scripts to boost data integrity and streamline business analysis processes for enterprise clients.",
+      "Built scalable data warehouses and streamlined automated ETL workflows using Power BI, SQL, and DAX to deliver accurate business intelligence dashboards for enterprise clients.",
     ],
-    technologies: ["Power BI", "Power Query", "DAX", "SQL", "ETL", "Data Modeling"],
+    technologies: ["Power BI", "SQL", "DAX", "Power Query", "ETL"],
   },
 ];
 
 export const PROJECTS = [
   {
+    title: "DermaVista",
+    image: DermaVista,
+    description:
+      "A 100% offline edge-computing AI diagnostic system using a quantized MobileNetV3 CNN, executing heavy 4D tensor mathematics on background Dart Isolates to prevent main-thread UI blocking, resolving critical GPU memory exhaustion, and building a Pre-Inference Gatekeeper using Google ML Kit.",
+    technologies: ["Flutter", "Dart", "TensorFlow Lite", "Python", "Google ML Kit"],
+  },
+  {
     title: "Crisp Cleaning",
     image: CrispCleaning,
     description:
-      "A professional cleaning services platform managing both frontend interface and backend workflows, integrated with automated schedules, booking options, and optimized performance.",
-    technologies: ["React", "Next.js", "RESTful APIs", "Node.js", "Express", "SQL/NoSQL"],
+      "A comprehensive, multi-tenant operational SaaS management system migrated to Next.js, incorporating role-based interfaces, timezone-aware scheduling, Stripe automation, and precise Geoapify service routing.",
+    technologies: ["Next.js", "Node.js", "MongoDB", "Prisma", "Stripe", "Geoapify"],
     live: "https://www.crispcleaning.com.au/",
   },
   {
@@ -51,7 +57,7 @@ export const PROJECTS = [
     image: Karigar,
     description:
       "A platform that connects customers with verified service providers and material suppliers in Pakistan, offering an easy way to book skilled workers and purchase construction materials.",
-    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    technologies: ["HTML", "CSS", "JavaScript", "MySQL"],
   },
 ];
 

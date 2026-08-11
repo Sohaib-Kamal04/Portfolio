@@ -5,7 +5,6 @@ import {
   DiDocker,
   DiNodejsSmall,
   DiNpm,
-  DiPhp,
   DiReact,
   DiDatabase,
 } from "react-icons/di";
@@ -23,6 +22,11 @@ import {
   SiMysql,
   SiVite,
   SiCplusplus,
+  SiPrisma,
+  SiStripe,
+  SiFlutter,
+  SiDart,
+  SiTensorflow,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
@@ -67,7 +71,7 @@ const iconVariants = {
 const About = () => {
   const techCategories = [
     {
-      title: "Frontend",
+      title: "Frontend & Mobile",
       technologies: [
         {
           icon: (
@@ -109,6 +113,18 @@ const About = () => {
           ),
           name: "React Native",
         },
+        {
+          icon: (
+            <SiFlutter className="text-4xl lg:text-7xl text-cyan-400" />
+          ),
+          name: "Flutter",
+        },
+        {
+          icon: (
+            <SiDart className="text-4xl lg:text-7xl text-blue-400" />
+          ),
+          name: "Dart",
+        },
       ],
     },
     {
@@ -125,8 +141,12 @@ const About = () => {
           name: "Express",
         },
         {
-          icon: <DiPhp className="text-4xl lg:text-7xl text-purple-600" />,
-          name: "PHP",
+          icon: <SiPrisma className="text-4xl lg:text-7xl text-stone-200" />,
+          name: "Prisma",
+        },
+        {
+          icon: <SiStripe className="text-4xl lg:text-7xl text-indigo-400" />,
+          name: "Stripe",
         },
         {
           icon: <SiMongodb className="text-4xl lg:text-7xl text-green-600" />,
@@ -175,6 +195,10 @@ const About = () => {
         {
           icon: <FaJava className="text-4xl lg:text-7xl text-red-500" />,
           name: "Java",
+        },
+        {
+          icon: <SiTensorflow className="text-4xl lg:text-7xl text-orange-500" />,
+          name: "TensorFlow",
         },
         {
           icon: <DiDocker className="text-4xl lg:text-7xl text-blue-400" />,

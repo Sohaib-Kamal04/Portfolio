@@ -53,7 +53,7 @@ const Home = () => {
             <motion.p
               variants={childVariants}
               className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter">
-              Detail-oriented and analytical Software Engineer with hands-on experience in full-stack development, mobile applications, and data-driven solutions. Proficient in modern frameworks like React and Next.js, with a strong background in building responsive, high-conversion web interfaces and cross-platform mobile apps.
+              Software Engineer specializing in full-stack JavaScript development with experience building scalable SaaS applications using Next.js, Node.js, MongoDB, Prisma, React Native, and Flutter. Experienced in developing multi-tenant systems, integrating third-party APIs, and delivering end-to-end web and mobile solutions.
             </motion.p>
             <motion.a
               variants={childVariants}
