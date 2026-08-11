@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.png";
+import { CONTACT } from "../constants";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,14 +83,14 @@ const Navbar = () => {
       {/* Social Links */}
       <div className="flex items-center gap-4 text-2xl">
         <a
-          href="https://www.linkedin.com/in/sohaib-kamal-a99254342"
+          href={CONTACT.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn">
           <FaLinkedin />
         </a>
         <a
-          href="https://github.com/Sohaib-Kamal04"
+          href={CONTACT.github}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub">

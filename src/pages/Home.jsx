@@ -41,24 +41,19 @@ const Home = () => {
             className="flex flex-col items-center pt-7 lg:items-start lg:ml-16">
             <motion.h2
               variants={childVariants}
-              className="pb-2 text-4xl tracking-tighter lg:text-8xl leading-none">
-              Sohaib Kamal
+              className="pb-2 text-4xl tracking-tighter lg:text-7xl leading-none">
+              Chaudhary Sohaib Kamal
             </motion.h2>
 
             <motion.span
               variants={childVariants}
               className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent">
-              Full Stack Developer
+              Software Engineer
             </motion.span>
             <motion.p
               variants={childVariants}
               className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter">
-              I am a Full Stack Developer with a passion for building modern,
-              scalable web and mobile applications. I love transforming complex
-              problems into elegant, maintainable, and user-friendly solutions
-              that deliver impact. My work spans frontend design, backend
-              architecture, and full-stack deployments. I strive to write clean,
-              efficient code and deliver production-ready digital experiences.
+              Detail-oriented and analytical Software Engineer with hands-on experience in full-stack development, mobile applications, and data-driven solutions. Proficient in modern frameworks like React and Next.js, with a strong background in building responsive, high-conversion web interfaces and cross-platform mobile apps.
             </motion.p>
             <motion.a
               variants={childVariants}

@@ -7,8 +7,9 @@ import {
   DiNpm,
   DiPhp,
   DiReact,
+  DiDatabase,
 } from "react-icons/di";
-import { FaGitAlt } from "react-icons/fa";
+import { FaGitAlt, FaJava, FaChartBar, FaFileExcel } from "react-icons/fa";
 import {
   RiHtml5Fill,
   RiJavascriptFill,
@@ -21,6 +22,7 @@ import {
   SiMongodb,
   SiMysql,
   SiVite,
+  SiCplusplus,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
@@ -110,7 +112,7 @@ const About = () => {
       ],
     },
     {
-      title: "Backend",
+      title: "Backend & Databases",
       technologies: [
         {
           icon: (
@@ -140,11 +142,40 @@ const About = () => {
           ),
           name: "PostgreSQL",
         },
+        {
+          icon: <DiDatabase className="text-4xl lg:text-7xl text-amber-500" />,
+          name: "SQL & NoSQL",
+        },
       ],
     },
     {
-      title: "Tools & Technologies",
+      title: "Data Analytics & Engineering",
       technologies: [
+        {
+          icon: <FaChartBar className="text-4xl lg:text-7xl text-yellow-500" />,
+          name: "Power BI",
+        },
+        {
+          icon: <FaFileExcel className="text-4xl lg:text-7xl text-green-700" />,
+          name: "Excel / Power Query",
+        },
+        {
+          icon: <DiDatabase className="text-4xl lg:text-7xl text-indigo-400" />,
+          name: "DAX & Data Modeling",
+        },
+      ],
+    },
+    {
+      title: "Languages & Tools",
+      technologies: [
+        {
+          icon: <SiCplusplus className="text-4xl lg:text-7xl text-blue-600" />,
+          name: "C++",
+        },
+        {
+          icon: <FaJava className="text-4xl lg:text-7xl text-red-500" />,
+          name: "Java",
+        },
         {
           icon: <DiDocker className="text-4xl lg:text-7xl text-blue-400" />,
           name: "Docker",
@@ -160,14 +191,6 @@ const About = () => {
         {
           icon: <VscVscode className="text-4xl lg:text-7xl text-blue-500" />,
           name: "VS Code",
-        },
-        {
-          icon: <SiVite className="text-4xl lg:text-7xl text-yellow-500" />,
-          name: "Vite",
-        },
-        {
-          icon: <DiNpm className="text-4xl lg:text-7xl text-red-600" />,
-          name: "NPM",
         },
       ],
     },
